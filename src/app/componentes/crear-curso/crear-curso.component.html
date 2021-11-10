@@ -1,0 +1,215 @@
+<app-header></app-header>
+
+<div class="container-fluid">
+    <div id="contorno">
+        <div *ngIf="!activarMsj">
+            <form class="row g-3 needs-validation" [formGroup]="formulario" (ngSubmit)="validacion()" novalidate>
+                <ul>
+                    <li>
+                        <label class="form-label" >ID:</label>
+                        <input class="form-control"  formControlName="id" type="text"  placeholder="ID">
+                            <div *ngIf="formulario.controls['id'].invalid && (formulario.controls['id'].dirty || formulario.controls['id'].touched)" class="alert alert-danger">
+                                <div *ngIf="formulario.controls['id'].hasError('required') ">
+                                    Campo obligatorio
+                                </div>
+                                <div class="alerta" *ngIf="formulario.controls['id'].hasError('maxlength')">
+                                    El máximo de caracteres es 2
+                                </div>
+                                <div class="alerta" *ngIf="formulario.controls['id'].hasError('pattern')">
+                                    Solo se aceptan números
+                                </div>
+                            </div>
+                    </li>
+
+                    <li>
+                        <label class="form-label" >Nombre Curso:</label>
+                        <input class="form-control" formControlName="nombre" type="text"  placeholder="Nombre del curso">
+                        <div *ngIf="formulario.controls['nombre'].invalid && (formulario.controls['nombre'].dirty || formulario.controls['nombre'].touched)" class="alert alert-danger">
+                            <div *ngIf="formulario.controls['nombre'].hasError('required')">
+                                Campo obligatorio
+                            </div>
+                            <div *ngIf="formulario.controls['nombre'].hasError('maxlength')">
+                                El máximo de caracteres es 25
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <label class="form-label" >Nota 1:</label>
+                        <input class="form-control"  formControlName="nota1" type="number"  placeholder="Nota 1">
+                            <div *ngIf="formulario.controls['nota1'].invalid && (formulario.controls['nota1'].dirty || formulario.controls['nota1'].touched)" class="alert alert-danger">
+                                <div *ngIf="formulario.controls['nota1'].hasError('required') ">
+                                    Campo obligatorio
+                                </div>
+                                <div class="alerta" *ngIf="formulario.controls['nota1'].hasError('maxlength')">
+                                    El máximo de caracteres es 2
+                                </div>
+                                <div class="alerta" *ngIf="formulario.controls['nota1'].hasError('pattern')">
+                                    Solo se aceptan números
+                                </div>
+                            </div>
+                    </li>
+
+
+                    <li>
+                        <label class="form-label" >Nota 2:</label>
+                        <input class="form-control"  formControlName="nota2" type="number"  placeholder="Nota 2">
+                            <div *ngIf="formulario.controls['nota2'].invalid && (formulario.controls['nota2'].dirty || formulario.controls['nota2'].touched)" class="alert alert-danger">
+                                <div *ngIf="formulario.controls['nota2'].hasError('required') ">
+                                    Campo obligatorio
+                                </div>
+                                <div class="alerta" *ngIf="formulario.controls['nota2'].hasError('maxlength')">
+                                    El máximo de caracteres es 2
+                                </div>
+                                <div class="alerta" *ngIf="formulario.controls['nota2'].hasError('pattern')">
+                                    Solo se aceptan números
+                                </div>
+                            </div>
+                    </li>
+
+
+                    <li>
+                        <label class="form-label" >Nota 3:</label>
+                        <input class="form-control"  formControlName="nota3" type="number"  placeholder="Nota 3">
+                            <div *ngIf="formulario.controls['nota3'].invalid && (formulario.controls['nota3'].dirty || formulario.controls['nota3'].touched)" class="alert alert-danger">
+                                <div *ngIf="formulario.controls['nota3'].hasError('required') ">
+                                    Campo obligatorio
+                                </div>
+                                <div class="alerta" *ngIf="formulario.controls['nota3'].hasError('maxlength')">
+                                    El máximo de caracteres es 2
+                                </div>
+                                <div class="alerta" *ngIf="formulario.controls['nota3'].hasError('pattern')">
+                                    Solo se aceptan números
+                                </div>
+                            </div>
+                    </li>
+
+
+
+                    <li>
+                        <label class="form-label" >Nota 4:</label>
+                        <input class="form-control"  formControlName="nota4" type="number"  placeholder="Nota 4">
+                            <div *ngIf="formulario.controls['nota4'].invalid && (formulario.controls['nota4'].dirty || formulario.controls['nota4'].touched)" class="alert alert-danger">
+                                <div *ngIf="formulario.controls['nota4'].hasError('required') ">
+                                    Campo obligatorio
+                                </div>
+                                <div class="alerta" *ngIf="formulario.controls['nota4'].hasError('maxlength')">
+                                    El máximo de caracteres es 2
+                                </div>
+                                <div class="alerta" *ngIf="formulario.controls['nota4'].hasError('pattern')">
+                                    Solo se aceptan números
+                                </div>
+                            </div>
+                    </li>
+
+
+
+                    <li>
+                        <label class="form-label" >Nota 5:</label>
+                        <input class="form-control"  formControlName="nota5" type="number"  placeholder="Nota 5">
+                            <div *ngIf="formulario.controls['nota5'].invalid && (formulario.controls['nota5'].dirty || formulario.controls['nota5'].touched)" class="alert alert-danger">
+                                <div *ngIf="formulario.controls['nota5'].hasError('required') ">
+                                    Campo obligatorio
+                                </div>
+                                <div class="alerta" *ngIf="formulario.controls['nota5'].hasError('maxlength')">
+                                    El máximo de caracteres es 2
+                                </div>
+                                <div class="alerta" *ngIf="formulario.controls['nota5'].hasError('pattern')">
+                                    Solo se aceptan números
+                                </div>
+                            </div>
+                    </li>
+
+
+                    <li>
+                        <label class="form-label" >Porcentaje 1: %</label>
+                        <input class="form-control"  formControlName="porcentaje1" type="number"  placeholder="Porcentaje 1">
+                            <div *ngIf="formulario.controls['porcentaje1'].invalid && (formulario.controls['porcentaje1'].dirty || formulario.controls['porcentaje1'].touched)" class="alert alert-danger">
+                                <div *ngIf="formulario.controls['porcentaje1'].hasError('required') ">
+                                    Campo obligatorio
+                                </div>
+                                <div class="alerta" *ngIf="formulario.controls['porcentaje1'].hasError('maxlength')">
+                                    El máximo de caracteres es 2
+                                </div>
+                                <div class="alerta" *ngIf="formulario.controls['porcentaje1'].hasError('pattern')">
+                                    Solo se aceptan números
+                                </div>
+                            </div>
+                    </li>
+
+                    <li>
+                        <label class="form-label" >Porcentaje 2: %</label>
+                        <input class="form-control"  formControlName="porcentaje2" type="number"  placeholder="Porcentaje 2">
+                            <div *ngIf="formulario.controls['porcentaje2'].invalid && (formulario.controls['porcentaje2'].dirty || formulario.controls['porcentaje2'].touched)" class="alert alert-danger">
+                                <div *ngIf="formulario.controls['porcentaje2'].hasError('required') ">
+                                    Campo obligatorio
+                                </div>
+                                <div class="alerta" *ngIf="formulario.controls['porcentaje2'].hasError('maxlength')">
+                                    El máximo de caracteres es 2
+                                </div>
+                                <div class="alerta" *ngIf="formulario.controls['porcentaje2'].hasError('pattern')">
+                                    Solo se aceptan números
+                                </div>
+                            </div>
+                    </li>
+
+                    <li>
+                        <label class="form-label" >Porcentaje 3: %</label>
+                        <input class="form-control"  formControlName="porcentaje3" type="number"  placeholder="Porcentaje 3">
+                            <div *ngIf="formulario.controls['porcentaje3'].invalid && (formulario.controls['porcentaje3'].dirty || formulario.controls['porcentaje3'].touched)" class="alert alert-danger">
+                                <div *ngIf="formulario.controls['porcentaje3'].hasError('required') ">
+                                    Campo obligatorio
+                                </div>
+                                <div class="alerta" *ngIf="formulario.controls['porcentaje3'].hasError('maxlength')">
+                                    El máximo de caracteres es 2
+                                </div>
+                                <div class="alerta" *ngIf="formulario.controls['porcentaje3'].hasError('pattern')">
+                                    Solo se aceptan números
+                                </div>
+                            </div>
+                    </li>
+
+                    <li>
+                        <label class="form-label" >Porcentaje 4: %</label>
+                        <input class="form-control"  formControlName="porcentaje4" type="number"  placeholder="Porcentaje 4">
+                            <div *ngIf="formulario.controls['porcentaje4'].invalid && (formulario.controls['porcentaje4'].dirty || formulario.controls['porcentaje4'].touched)" class="alert alert-danger">
+                                <div *ngIf="formulario.controls['porcentaje4'].hasError('required') ">
+                                    Campo obligatorio
+                                </div>
+                                <div class="alerta" *ngIf="formulario.controls['porcentaje4'].hasError('maxlength')">
+                                    El máximo de caracteres es 2
+                                </div>
+                                <div class="alerta" *ngIf="formulario.controls['porcentaje4'].hasError('pattern')">
+                                    Solo se aceptan números
+                                </div>
+                            </div>
+                    </li>
+
+                    <li>
+                        <label class="form-label" >Porcentaje 5: %</label>
+                        <input class="form-control"  formControlName="porcentaje5" type="number"  placeholder="Porcentaje 5">
+                            <div *ngIf="formulario.controls['porcentaje5'].invalid && (formulario.controls['porcentaje5'].dirty || formulario.controls['porcentaje5'].touched)" class="alert alert-danger">
+                                <div *ngIf="formulario.controls['porcentaje5'].hasError('required') ">
+                                    Campo obligatorio
+                                </div>
+                                <div class="alerta" *ngIf="formulario.controls['porcentaje5'].hasError('maxlength')">
+                                    El máximo de caracteres es 2
+                                </div>
+                                <div class="alerta" *ngIf="formulario.controls['porcentaje5'].hasError('pattern')">
+                                    Solo se aceptan números
+                                </div>
+                            </div>
+                    </li>
+                    <li>
+                        <button class="boton" type="submit" [disabled]="!formulario.valid">Crear curso</button>
+                    </li>
+                    <li>
+                        <button class="boton" type="reset" >Cancelar</button>
+                    </li>
+                </ul>
+            </form>
+        </div>
+        <div *ngIf="activarMsj">
+            Se ha creado el curso  !!!
+        </div>
+    </div>
+</div>

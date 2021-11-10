@@ -1,0 +1,11 @@
+<app-header></app-header>
+
+<div class="container-fluid">
+    <ul>
+        <li *ngFor="let curso of ListaCursos" class="curso" >
+            <a [routerLink]="['/detalleCurso',curso.id]" routerLinkActive="router-link-active">  {{curso.nombreCurso}}</a>
+            <h6>Promedio hasta ahora {{curso.promedio}}  </h6>
+            
+        </li>
+    </ul>
+</div>
